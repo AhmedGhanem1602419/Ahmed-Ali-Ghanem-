@@ -1,0 +1,161 @@
+// pages/index.js
+import Head from 'next/head';
+import Image from 'next/image';
+
+export default function Home() {
+  return (
+    <>
+      <Head>
+        <title>Ahmed Ali Abd El Halim Ghanem — Portfolio</title>
+        <meta name="description" content="Ahmed Ali Abd El Halim Ghanem's professional portfolio, an Accounting & Entrepreneurship enthusiast." />
+      </Head>
+      <div className="bg-gray-100 text-gray-800 font-sans">
+        <header className="bg-white border-b">
+          <div className="max-w-5xl mx-auto px-6 py-8 md:flex md:items-center md:justify-between">
+            <div className="flex-grow">
+              <h1 className="text-3xl md:text-4xl font-bold">Ahmed Ali Abd El Halim Ghanem</h1>
+              <p className="mt-2 text-lg">Accounting & Entrepreneurship Enthusiast</p>
+            </div>
+            {/* Personal Photo */}
+            <div className="flex-shrink-0 mt-6 md:mt-0 md:ml-8">
+              <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-gray-200 shadow-md">
+                {/* To show your photo, add the file as public/your-photo.jpg */}
+                <Image 
+                  src="/your-photo.jpg" 
+                  alt="Ahmed Ali Abd El Halim Ghanem" 
+                  layout="fill" 
+                  objectFit="cover" 
+                />
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main className="max-w-5xl mx-auto px-6 py-10">
+          {/* About */}
+          <section className="mb-10">
+            <h2 className="text-2xl font-semibold mb-3">About Me</h2>
+            <p className="leading-relaxed">
+              I am passionate about accounting and entrepreneurship. I graduated from the Faculty of Commerce (Accounting Department) at Tanta University with a solid foundation in financial and business concepts. I have also completed multiple trainings in financial systems, banking, digital marketing, and strategic marketing for financial services.
+            </p>
+            <p className="mt-2 text-sm text-gray-600">
+              Date of Birth: 15 July 1997 • Nationality: Egyptian • Marital Status: Married • Military Service: Delayed
+            </p>
+          </section>
+
+          {/* Experience */}
+          <section className="mb-10">
+            <h2 className="text-2xl font-semibold mb-3">Experience</h2>
+            <div className="bg-white rounded-2xl shadow p-5">
+              <div className="flex items-center gap-4 mb-4">
+                {/* Company logo — add your file as public/mezan-logo.png */}
+                <div className="relative w-14 h-14">
+                  <Image src="/mezan-logo.png" alt="Mezan Abdulhakeem Al-Odheib Auto Maintenance logo" fill className="object-contain" />
+                </div>
+                <div>
+                  <p className="font-medium">Customer Accountant (Accounts Receivable)</p>
+                  <p className="text-sm text-gray-600">Mezan Abdulhakeem Al-Odheib for Car Maintenance Co.</p>
+                  <p className="text-sm text-gray-600">Nov 2022 – Present • Riyadh, Saudi Arabia</p>
+                </div>
+              </div>
+              <ul className="list-disc ml-6 space-y-1">
+                <li>Issue, post, and file sales/service invoices and credit/debit notes in the accounting system.</li>
+                <li>Record customer receipts (cash, POS, and bank transfers) and ensure timely daily deposits.</li>
+                <li>Maintain the Accounts Receivable ledger and reconcile customer statements monthly.</li>
+                <li>Follow up on collections, prepare AR aging reports and track collection targets.</li>
+                <li>Apply VAT requirements and ensure invoice compliance.</li>
+                <li>Assist in month-end closing, AR reconciliations, and provisioning for doubtful debts.</li>
+                <li>Prepare weekly and monthly AR/collection reports for management.</li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Education */}
+          <section className="mb-10">
+            <h2 className="text-2xl font-semibold mb-3">Education</h2>
+            <div className="bg-white rounded-2xl shadow p-5">
+              <p className="font-medium">Faculty of Commerce, Accounting Department — Tanta University</p>
+              <p className="text-sm text-gray-600">Sep 2015 – May 2019 • Grade: Good</p>
+            </div>
+          </section>
+
+          {/* Training */}
+          <section className="mb-10">
+            <h2 className="text-2xl font-semibold mb-3">Training</h2>
+            <div className="bg-white rounded-2xl shadow p-5">
+              <ul className="list-disc ml-6 space-y-1">
+                <li>Oracle Financial Management Systems for Implementer</li>
+                <li>Microsoft Office Specialist Master 2016 (MOS)</li>
+                <li>Digital Marketing Nanodegree</li>
+                <li>ICDL</li>
+                <li>Training Programme for Financial Services Industry and Banking</li>
+                <li>Preparation for Investment Manager in Stock Exchange</li>
+                <li>Strategic Marketing for Financial Services</li>
+                <li>Entrepreneurship (InnoEgypt 2018)</li>
+                <li>Benha Electronics Co. (Factory 144 – Military) — Cost Accountant</li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Skills */}
+          <section className="mb-10 grid md:grid-cols-2 gap-6">
+            <div className="bg-white rounded-2xl shadow p-5">
+              <h3 className="text-xl font-semibold mb-2">Languages</h3>
+              <p>Arabic (Native), English (Good)</p>
+            </div>
+            <div className="bg-white rounded-2xl shadow p-5">
+              <h3 className="text-xl font-semibold mb-2">Computer Knowledge</h3>
+              <p>Windows, MS Office 2016, SPSS, MS Project 2013</p>
+            </div>
+            <div className="bg-white rounded-2xl shadow p-5 md:col-span-2">
+              <h3 className="text-xl font-semibold mb-2">Personal Skills</h3>
+              <ul className="list-disc ml-6">
+                <li>Communication</li>
+                <li>Teamwork</li>
+                <li>Time Management</li>
+                <li>Presentation</li>
+                <li>Negotiation</li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Contact */}
+          <section className="mb-10">
+            <h2 className="text-2xl font-semibold mb-3">Contact</h2>
+            <div className="bg-white rounded-2xl shadow p-5 space-y-2">
+              <div>
+                <p className="font-medium">Phone</p>
+                <p>📞 Saudi: <a className="text-blue-600 hover:underline" href="tel:+966565368979">+966 565 368 979</a></p>
+                <p>📞 Egypt: <a className="text-blue-600 hover:underline" href="tel:+201003381976">+20 100 338 1976</a></p>
+              </div>
+              <div>
+                <p className="font-medium">Email</p>
+                <p>📧 <a className="text-blue-600 hover:underline" href="mailto:aliahmedali1602419@gmail.com">aliahmedali1602419@gmail.com</a></p>
+              </div>
+              <div>
+                <p className="font-medium">Address</p>
+                <ul className="list-disc ml-6">
+                  <li>Saudi: Riyadh, Saudi Arabia</li>
+                  <li>Egypt: Qotur, Al Gharbia, Egypt</li>
+                </ul>
+              </div>
+              {/* Social Media Links */}
+              <div>
+                <p className="font-medium">Social Media</p>
+                <ul className="list-disc ml-6">
+                  <li><a className="text-blue-600 hover:underline" href="https://www.linkedin.com/in/ahmed-ghanem-baa5b7161?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                  <li><a className="text-blue-600 hover:underline" href="https://www.facebook.com/share/1C2kCQqHef/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* Footer */}
+          <footer className="text-center text-sm text-gray-500 py-6">
+            © {new Date().getFullYear()} Ahmed Ali Abd El Halim Ghanem
+          </footer>
+        </main>
+      </div>
+    </>
+  );
+}
